@@ -87,11 +87,8 @@ const Stations = () => {
           />
         ))}
       </ScrollView>
-      <Button
-        style={buttonStyles.bigButton}
-        onPress={() => router.push('/stations/create-station')}
-      >
-        <Text style={textStyles.bigButtonText}> Create Station</Text>
+      <Button onPress={() => router.push('/stations/create-station')}>
+        Create Station
       </Button>
     </SafeAreaView>
   );
