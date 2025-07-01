@@ -55,16 +55,19 @@ const Stations = () => {
               filter === label && buttonStyles.activeButton,
             ]}
             onPress={() => setFilter(label as typeof filter)}
-            textStyle={[
-              textStyles.buttonText,
-              filter === label && textStyles.activeText,
-            ]}
           >
-            {label === 'All'
-              ? 'All'
-              : label === 'Stocked'
-                ? 'Stocked'
-                : 'Unstocked'}
+            <Text
+              style={[
+                textStyles.buttonText,
+                filter === label && textStyles.activeText,
+              ]}
+            >
+              {label === 'All'
+                ? 'All'
+                : label === 'Stocked'
+                  ? 'Stocked'
+                  : 'Unstocked'}
+            </Text>
           </Button>
         ))}
       </View>
