@@ -1,10 +1,11 @@
 import { StyleProp, View, ViewStyle } from 'react-native';
 
-import { Button } from './Button';
 import { Ionicons } from '@expo/vector-icons';
 
 import { PhotoHandler } from '@/image_handlers/PhotoHandler';
 import { buttonStyles, containerStyles } from '@/styles';
+
+import { Button } from './Button';
 
 type CameraButtonProps = {
   onPhotoSelected: (uri: string) => void;
