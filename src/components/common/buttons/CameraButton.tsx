@@ -1,11 +1,9 @@
 import { StyleProp, View, ViewStyle } from 'react-native';
 
-import { Ionicons } from '@expo/vector-icons';
-
 import { PhotoHandler } from '@/image_handlers/PhotoHandler';
 import { buttonStyles, containerStyles } from '@/styles';
 
-import { Button } from './Button';
+import { IconButton } from './IconButton';
 
 type CameraButtonProps = {
   onPhotoSelected: (uri: string) => void;
@@ -19,12 +17,12 @@ export const CameraButton: React.FC<CameraButtonProps> = ({
 
   return (
     <View style={containerStyles.cameraContainer}>
-      <Button
+      <IconButton
+        icon="camera-outline"
+        size={29}
         style={buttonStyles.cameraButton}
         onPress={() => photoHandler.promptForImageSource()}
-      >
-        <Ionicons name="camera-outline" size={29} color="#fff" />
-      </Button>
+      />
     </View>
   );
 };
